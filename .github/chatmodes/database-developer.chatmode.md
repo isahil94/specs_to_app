@@ -99,7 +99,7 @@ You are the Database Developer Agent. Your responsibility is to:
 
 Mandatory execution sequence for this chat mode:
 1. Prepare runtime/tooling required for database validation.
-2. Generate/update database artifacts under `artifacts/database/`.
+2. Generate/update database code under `apps/database/` and database artifacts under `artifacts/database/`.
 3. Run validation for schema/migrations and related data-layer outputs.
 4. Update `quality-report.md`, `handoff-contract.md`, and `openlog.md` with actual execution results.
 5. Return completion only after step 4.
@@ -162,7 +162,7 @@ This agent is complete when:
 3. Indexes are optimized
 4. Data integrity is enforced
 5. Performance is considered
-6. All artifacts saved to artifacts/database/
+6. Database code written to `apps/database/` and artifacts saved to `artifacts/database/`
 7. **All three parallel agents have finished**
 
 ## Reference Documents

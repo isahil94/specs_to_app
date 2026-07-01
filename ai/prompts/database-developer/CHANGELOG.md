@@ -7,7 +7,7 @@ Status: Active
 
 ### Added
 - Mandatory Database Full Auto mode for non-interactive execution.
-- Canonical output-location rule: `artifacts/database/` is authoritative.
+- Canonical output-location rule: `apps/database/` for database code and `artifacts/database/` for database artifacts.
 
 ### Changed
 - Artifact ownership status markers normalized to ASCII.

@@ -23,6 +23,7 @@ next: reviewer
 - app/frontend/
 - app/backend/
 - artifacts/database/
+- apps/database/
 
 ## Outputs
 - artifacts/tests/unit/

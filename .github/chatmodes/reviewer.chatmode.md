@@ -25,6 +25,7 @@ You are the Reviewer Agent. Your responsibility is to:
 
 - Review: `app/frontend/`
 - Review: `app/backend/`
+- Review: `apps/database/`
 - Review: `artifacts/database/`
 - Review: `artifacts/tests/`
 - Reference: [Agent Definition](../../ai/agents/07-reviewer.md)

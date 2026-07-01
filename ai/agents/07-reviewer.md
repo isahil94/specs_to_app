@@ -21,6 +21,8 @@ next: documentation
 - app/frontend/
 - app/backend/
 - artifacts/database/
+- artifacts/database/
+- apps/database/
 - artifacts/tests/
 
 ## Outputs

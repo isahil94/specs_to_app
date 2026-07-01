@@ -41,6 +41,14 @@ next: qa_engineer
 - artifacts/backend/openlog.md
 
 ## Outputs
+- apps/database/
+- apps/database/sql/schema.sql
+- apps/database/sql/migrations/
+- apps/database/sql/seed/
+- apps/database/sql/views/
+- apps/database/sql/procedures/
+- apps/database/orm/
+- apps/database/README.md
 - artifacts/database/sql/schema.sql
 - artifacts/database/sql/migrations/
 - artifacts/database/sql/seed/

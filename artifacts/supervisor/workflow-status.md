@@ -18,7 +18,7 @@
 |---|---|---|---|---|---|
 | UI/UX Developer | ui-ux-developer | STARTED | requirements + architecture artifacts | app/frontend/ | artifacts/frontend/ |
 | Backend Developer | backend-developer | STARTED | requirements + architecture artifacts | app/backend/ | artifacts/backend/ |
-| Database Developer | database-developer | STARTED | requirements + architecture artifacts | N/A | artifacts/database/ |
+| Database Developer | database-developer | STARTED | requirements + architecture artifacts | apps/database/ | artifacts/database/ |
 
 ## Stage Exit Criteria
 - All three implementation agents publish handoff-contract.md

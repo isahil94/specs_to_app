@@ -133,7 +133,7 @@ Generate backend artifacts and save to artifacts/backend:
 21. handoff-contract.md
 22. openlog.md
 
-Governance rule: do not modify api-contracts.md. Do not generate database-owned artifacts under `artifacts/database/`.
+Governance rule: do not modify `api-contracts.md`. Do not generate or modify database-owned artifacts; database code belongs in `apps/database/` and artifacts belong in `artifacts/database/`, produced only by Database Developer.
 Deduplication rule: keep design and implementation details in the six backend artifacts and avoid duplicating those details in governance artifacts.
 Primary output location rule: backend implementation code is authoritative under `apps/backend/`; governance artifacts under `artifacts/backend/`.
 
