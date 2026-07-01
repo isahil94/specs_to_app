@@ -5,7 +5,7 @@ version: 1.0.0
 category: database
 execution: autonomous
 depends_on: [backend_developer]
-consumes: [requirements_spec, user_stories, acceptance_criteria, traceability, architecture_design, technology_stack, module_design, api_contracts, security_architecture, handoff_contract, quality_report, openlog, backend_services, business_entities]
+consumes: [requirements_spec, user_stories, acceptance_criteria, traceability, architecture_design, technology_stack, module_design, api_contracts, security_architecture, backend_design, backend_endpoints, backend_business_logic, backend_validation_rules, backend_integration_implementation, backend_spec, backend_handoff, handoff_contract, quality_report, openlog]
 produces: [sql_schema, migrations, seed_data, constraints, indexes, views, procedures_functions, orm_mapping, database_readme, quality_report, handoff_contract, openlog]
 next: qa_engineer
 ---
@@ -30,6 +30,7 @@ next: qa_engineer
 - artifacts/backend/business-logic.md
 - artifacts/backend/validation-rules.md
 - artifacts/backend/integration-implementation.md
+- artifacts/backend/backend-spec.md
 - artifacts/backend/backend-development-report.md
 - artifacts/architecture/api-contracts.md (reference)
 - artifacts/architecture/handoff-contract.md

@@ -95,7 +95,7 @@ Mandatory execution sequence for this chat mode:
 3. Generate/update backend code under `apps/backend/`.
 4. Run validation (`.venv\\Scripts\\python.exe -m pytest tests -v --tb=short` or backend-scoped equivalent).
 5. Run backend API process (`.venv\\Scripts\\python.exe -m uvicorn apps.backend.main:app --host 127.0.0.1 --port 8001`) and verify `GET /health` returns success.
-6. Generate backend stage artifacts under `artifacts/backend/` including `backend-design.md`, `endpoint-implementation.md`, `business-logic.md`, `validation-rules.md`, `integration-implementation.md`, `backend-development-report.md`, `quality-report.md`, `handoff-contract.md`, and `openlog.md` with actual execution results.
+6. Generate backend stage artifacts under `artifacts/backend/` including `backend-design.md`, `endpoint-implementation.md`, `business-logic.md`, `validation-rules.md`, `integration-implementation.md`, `backend-spec.md`, `backend-development-report.md`, `quality-report.md`, `handoff-contract.md`, and `openlog.md` with actual execution results.
 7. Return completion only after step 6 with a stage summary in the same style as Solution Architect output (artifact list + status + next agents).
 
 ### Reference Skills

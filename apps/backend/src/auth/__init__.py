@@ -1,1 +1,1 @@
-# Auth package
+"""Authentication module."""

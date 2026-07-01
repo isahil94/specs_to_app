@@ -6,7 +6,7 @@ category: backend
 execution: autonomous
 depends_on: [solution_architect]
 consumes: [requirements_spec, user_stories, acceptance_criteria, non_functional_requirements, traceability, architecture_design, technology_stack, module_design, api_contracts, security_architecture, handoff_contract, quality_report, openlog, coding_guidelines]
-produces: [backend_project, controllers, services, dtos, domain_models, validation, authn_authz, api_implementation, exception_handling, logging, configuration, unit_test_scaffolding, backend_design, endpoint_implementation, business_logic, validation_rules, integration_implementation, backend_development_report, quality_report, handoff_contract, openlog]
+produces: [backend_project, controllers, services, dtos, domain_models, validation, authn_authz, api_implementation, exception_handling, logging, configuration, unit_test_scaffolding, backend_design, endpoint_implementation, business_logic, validation_rules, integration_implementation, backend_spec, backend_development_report, quality_report, handoff_contract, openlog]
 next: database_developer
 ---
 
@@ -52,6 +52,7 @@ next: database_developer
 - artifacts/backend/business-logic.md
 - artifacts/backend/validation-rules.md
 - artifacts/backend/integration-implementation.md
+- artifacts/backend/backend-spec.md
 - artifacts/backend/backend-development-report.md
 - artifacts/backend/quality-report.md
 - artifacts/backend/handoff-contract.md
@@ -67,6 +68,7 @@ Canonical output location:
 - `artifacts/backend/business-logic.md`
 - `artifacts/backend/validation-rules.md`
 - `artifacts/backend/integration-implementation.md`
+- `artifacts/backend/backend-spec.md`
 - `artifacts/backend/backend-development-report.md`
 - `artifacts/backend/openlog.md`, `artifacts/backend/handoff-contract.md`, `artifacts/backend/quality-report.md`.
 

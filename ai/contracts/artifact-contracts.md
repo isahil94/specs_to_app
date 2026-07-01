@@ -107,7 +107,9 @@ Lifecycle (applies to all artifacts):
 | api-contracts.md | Service interface contracts and error models | Solution Architect | Backend Developer, QA Engineer, Documentation | Markdown |
 | database-schema.md | Logical and physical data model definition | Database Developer | Backend Developer, QA Engineer, Documentation | Markdown |
 | frontend-spec.md | UI structure, interaction, accessibility, design constraints | UI/UX Developer | Backend Developer, QA Engineer, Reviewer, Documentation | Markdown |
-| backend-spec.md | Service behavior, use cases, and integration mapping | Backend Developer | QA Engineer, Reviewer, DevOps & Release, Documentation | Markdown |
+| backend-spec.md | Service behavior, use cases, and integration mapping | Backend Developer | Database Developer, QA Engineer, Reviewer, DevOps & Release, Documentation | Markdown |
+| validation-rules.md | Backend validation rules, input constraints, and database-level requirements | Backend Developer | Database Developer, QA Engineer, Reviewer, Documentation | Markdown |
+| integration-implementation.md | Service integration patterns, data flows, transaction scope, and backend-to-backend interactions | Backend Developer | Database Developer, QA Engineer, Reviewer, Documentation | Markdown |
 | qa-report.md | Verification results, defects, and quality decision | QA Engineer | Reviewer, Supervisor, DevOps & Release | Markdown |
 | review-report.md | Independent quality and governance assessment | Reviewer | Supervisor, DevOps & Release, Documentation | Markdown |
 | release-notes.md | Deployment summary, changes, risk, rollback notes | DevOps & Release | Documentation, Supervisor | Markdown |
@@ -292,7 +294,7 @@ content:
 - Name: backend-spec.md
 - Purpose: Defines domain services, workflows, integrations, and operational behavior.
 - Owner Agent: Backend Developer
-- Consuming Agents: QA Engineer, Reviewer, DevOps & Release, Documentation.
+- Consuming Agents: Database Developer, QA Engineer, Reviewer, DevOps & Release, Documentation.
 - File Format: Markdown
 - Validation Rules: Must align with api-contracts.md, database-schema.md, and business rules.
 - Versioning: Semantic versioning.
@@ -307,6 +309,50 @@ content:
       responsibilities: [create, update, assign]
   observability:
     metrics: [task_create_latency, task_create_error_rate]
+```
+
+### 7.14 validation-rules.md
+- Name: validation-rules.md
+- Purpose: Defines backend validation rules, input constraints, database-level checks, and DTO requirements.
+- Owner Agent: Backend Developer
+- Consuming Agents: Database Developer, QA Engineer, Reviewer, Documentation.
+- File Format: Markdown
+- Validation Rules: Must align with api-contracts.md, backend-spec.md, and database-schema.md.
+- Versioning: Semantic versioning.
+- Lifecycle: Draft -> Validated -> Published -> Archived.
+- Required Fields: fieldValidation, enumConstraints, crossFieldRules, databaseConstraints.
+- Optional Fields: performanceConsiderations, errorMappings.
+- Example Structure:
+```yaml
+content:
+  fields:
+    - name: email
+      rules: [required, email, unique, lowercase]
+  databaseConstraints:
+    - name: user_email_unique
+      type: unique
+```
+
+### 7.15 integration-implementation.md
+- Name: integration-implementation.md
+- Purpose: Documents service integration patterns, data flows, transaction scope, and backend-to-backend interactions.
+- Owner Agent: Backend Developer
+- Consuming Agents: Database Developer, QA Engineer, Reviewer, Documentation.
+- File Format: Markdown
+- Validation Rules: Must align with backend-spec.md, business-logic.md, and api-contracts.md.
+- Versioning: Semantic versioning.
+- Lifecycle: Draft -> Validated -> Published -> Archived.
+- Required Fields: serviceInteractions, workflows, dataFlows, transactionScope.
+- Optional Fields: performancePatterns, cachingNotes.
+- Example Structure:
+```yaml
+content:
+  serviceInteractions:
+    - from: TaskService
+      to: NotificationService
+      type: async
+  transactionScope:
+    - createTask: atomic
 ```
 
 ### 7.14 qa-report.md

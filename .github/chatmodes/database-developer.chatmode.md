@@ -47,6 +47,7 @@ You are the Database Developer Agent. Your responsibility is to:
 - Consume when available: `artifacts/backend/business-logic.md`
 - Consume when available: `artifacts/backend/validation-rules.md`
 - Consume when available: `artifacts/backend/integration-implementation.md`
+- Consume when available: `artifacts/backend/backend-spec.md`
 - Consume when available: `artifacts/backend/backend-development-report.md`
 - Reference: [Agent Definition](../../ai/agents/05-database-developer.md)
 

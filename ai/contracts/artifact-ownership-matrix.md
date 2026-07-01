@@ -106,8 +106,9 @@ Columns: BA = Business Analyst | SA = Solution Architect | UX = UI/UX Developer 
 | backend-design.md | NONE | NONE | NONE | OWN | REFERENCE | CONSUME | REFERENCE | NONE | REFERENCE | NONE |
 | endpoint-implementation.md | NONE | NONE | NONE | OWN | NONE | CONSUME | REFERENCE | NONE | NONE | NONE |
 | business-logic.md | NONE | NONE | NONE | OWN | REFERENCE | CONSUME | CONSUME | NONE | REFERENCE | NONE |
-| validation-rules.md | NONE | NONE | NONE | OWN | NONE | CONSUME | REFERENCE | NONE | NONE | NONE |
-| integration-implementation.md | NONE | NONE | NONE | OWN | NONE | CONSUME | REFERENCE | REFERENCE | NONE | NONE |
+| validation-rules.md | NONE | NONE | NONE | OWN | CONSUME | REFERENCE | REFERENCE | NONE | NONE | NONE |
+| integration-implementation.md | NONE | NONE | NONE | OWN | CONSUME | REFERENCE | REFERENCE | REFERENCE | NONE | NONE |
+| backend-spec.md | NONE | NONE | NONE | OWN | CONSUME | REFERENCE | REFERENCE | REFERENCE | NONE | NONE |
 | backend-development-report.md | NONE | NONE | NONE | OWN | NONE | REFERENCE | CONSUME | NONE | NONE | CONSUME |
 
 ### 3.5 Database Developer Artifacts
