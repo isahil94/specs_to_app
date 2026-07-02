@@ -1,0 +1,10 @@
+.auth-form {
+  display: grid;
+  gap: 16px;
+}
+
+.auth-footer {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}

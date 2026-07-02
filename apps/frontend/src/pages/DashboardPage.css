@@ -1,0 +1,14 @@
+.dashboard-grid {
+  margin-top: 24px;
+}
+
+.dashboard-panel .panel-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+
+.panel-empty {
+  color: var(--text-muted);
+}
