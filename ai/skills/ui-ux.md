@@ -4,6 +4,8 @@ This document defines reusable capabilities for the UI/UX Developer agent in int
 
 ---
 
+<!-- MANDATORY_COMMAND: On completion, implement the UI using the tech stack specified in upstream artifacts; generate a runnable frontend under `app/frontend/`, run it locally, and open it in the default browser. This directive must be followed and must not be duplicated in this file. -->
+
 ## Skill: Generate UI Structure
 
 ### Purpose

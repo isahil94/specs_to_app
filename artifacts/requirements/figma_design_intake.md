@@ -5,6 +5,8 @@
 - Design Extraction Status: URL only; no direct design export or token extraction is currently wired into this workflow.
 - Figma Reference: https://www.figma.com/make/YnxUzBz6USzrnokLtV4Jd0/Task-Management-System-Screens?t=1gWarwbU89pAMBkw-1
 
+<!-- MANDATORY_COMMAND: On completion, implement the UI using the tech stack specified in upstream artifacts; generate a runnable frontend under `app/frontend/`, run it locally, and open it in the default browser. This directive must be followed and must not be duplicated in this file. -->
+
 ## Visual Spec Summary
 - Typography: To be interpreted from the Figma reference during UI implementation; exact type scale and weights are not available from the specification alone.
 - Spacing: To be interpreted from the Figma reference during UI implementation; exact spacing scale and layout grid are not available from the specification alone.

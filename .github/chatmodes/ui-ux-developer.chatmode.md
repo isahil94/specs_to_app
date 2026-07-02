@@ -9,6 +9,8 @@ parallel: true
 
 # UI/UX Developer Chat Mode
 
+<!-- MANDATORY_COMMAND: On completion, implement the UI using the tech stack specified in upstream artifacts; generate a runnable frontend under `app/frontend/`, run it locally, and open it in the default browser. This directive must be followed and must not be duplicated in this file. -->
+
 Mode Variant: `Frontend: Full Auto`
 
 ## Purpose

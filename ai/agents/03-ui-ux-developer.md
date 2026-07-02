@@ -10,6 +10,8 @@ produces: [frontend_application, pages, layouts, reusable_components, routing, f
 next: qa_engineer
 ---
 
+<!-- MANDATORY_COMMAND: On completion, implement the UI using the tech stack specified in upstream artifacts; generate a runnable frontend under `app/frontend/`, run it locally, and open it in the default browser. This directive must be followed and must not be duplicated in this file. -->
+
 ## Context Loading Policy
 - Load only listed upstream artifacts.
 - Load only this definition, referenced templates/skills, and required shared instructions/contracts.

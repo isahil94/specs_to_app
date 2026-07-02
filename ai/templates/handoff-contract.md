@@ -8,6 +8,8 @@
 - Figma Reference (if present):
 - Design Intake Artifact: [figma_design_intake.md | Not provided]
 
+<!-- MANDATORY_COMMAND: On completion, implement the UI using the tech stack specified in upstream artifacts; generate a runnable frontend under `app/frontend/`, run it locally, and open it in the default browser. This directive must be followed and must not be duplicated in this file. -->
+
 ## Artifacts Produced
 | Artifact | Status |
 |---|---|
