@@ -10,7 +10,7 @@ produces: [frontend_application, pages, layouts, reusable_components, routing, f
 next: qa_engineer
 ---
 
-<!-- MANDATORY_COMMAND: On completion, implement the UI using the tech stack specified in upstream artifacts; generate a runnable frontend under `app/frontend/`, run it locally, and open it in the default browser. This directive must be followed and must not be duplicated in this file. -->
+<!-- MANDATORY_COMMAND: On completion, implement the UI using the tech stack specified in upstream artifacts; generate a runnable frontend under `apps/frontend/`, run it locally, and open it in the default browser. This directive must be followed and must not be duplicated in this file. -->
 
 ## Context Loading Policy
 - Load only listed upstream artifacts.
@@ -38,21 +38,21 @@ next: qa_engineer
 - artifacts/requirements/openlog.md
 
 ## Outputs
-- app/frontend/package.json
-- app/frontend/tsconfig.json
-- app/frontend/vite.config.ts
-- app/frontend/src/main.tsx
-- app/frontend/src/App.tsx
-- app/frontend/src/pages/
-- app/frontend/src/layouts/
-- app/frontend/src/components/
-- app/frontend/src/routes/
-- app/frontend/src/forms/
-- app/frontend/src/state/
-- app/frontend/src/services/api/
-- app/frontend/src/styles/
-- app/frontend/src/assets/
-- app/frontend/README.md
+- apps/frontend/package.json
+- apps/frontend/tsconfig.json
+- apps/frontend/vite.config.ts
+- apps/frontend/src/main.tsx
+- apps/frontend/src/App.tsx
+- apps/frontend/src/pages/
+- apps/frontend/src/layouts/
+- apps/frontend/src/components/
+- apps/frontend/src/routes/
+- apps/frontend/src/forms/
+- apps/frontend/src/state/
+- apps/frontend/src/services/api/
+- apps/frontend/src/styles/
+- apps/frontend/src/assets/
+- apps/frontend/README.md
 - artifacts/frontend/quality-report.md
 - artifacts/frontend/handoff-contract.md
 - artifacts/frontend/openlog.md
@@ -91,7 +91,7 @@ next: qa_engineer
 - Do not duplicate architecture or requirement text
 - Reference upstream artifacts where possible
 - Preserve mandatory schemas for openlog/handoff/quality artifacts; compact content only.
-- Frontend implementation outputs must be written to `app/frontend/`.
+- Frontend implementation outputs must be written to `apps/frontend/`.
 - Only frontend governance artifacts may be written to `artifacts/frontend/`.
 - Automatically consume all available upstream artifacts before generation; treat them as authoritative.
 - Auto-discover and consume Figma reference from upstream artifacts; do not request it again.
@@ -122,3 +122,4 @@ Implements the presentation layer and publishes governance artifacts only.
 
 ## Next Agent
 qa_engineer
+

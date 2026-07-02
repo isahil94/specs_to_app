@@ -9,7 +9,7 @@ parallel: true
 
 # UI/UX Developer Chat Mode
 
-<!-- MANDATORY_COMMAND: On completion, implement the UI using the tech stack specified in upstream artifacts; generate a runnable frontend under `app/frontend/`, run it locally, and open it in the default browser. This directive must be followed and must not be duplicated in this file. -->
+<!-- MANDATORY_COMMAND: On completion, implement the UI using the tech stack specified in upstream artifacts; generate a runnable frontend under `apps/frontend/`, run it locally, and open it in the default browser. This directive must be followed and must not be duplicated in this file. -->
 
 Mode Variant: `Frontend: Full Auto`
 
@@ -87,7 +87,7 @@ Figma rule:
 - Provide implementation-ready accessibility behavior
 
 ### 5. Output Path Rules
-- Persist implementation code under `app/frontend/`.
+- Persist implementation code under `apps/frontend/`.
 - Persist frontend governance artifacts under `artifacts/frontend/` only.
 - Do not place frontend implementation output in `artifacts/frontend/`.
 
@@ -106,7 +106,7 @@ Figma rule:
 
 Mandatory execution sequence for this chat mode:
 1. Prepare frontend runtime/tooling required by approved architecture.
-2. Generate/update frontend code under `app/frontend/`.
+2. Generate/update frontend code under `apps/frontend/`.
 3. Run validation for generated frontend artifacts.
 4. Update governance artifacts under `artifacts/frontend/` (quality-report.md, handoff-contract.md, openlog.md) with actual execution results.
 5. Return completion only after step 4.
@@ -118,7 +118,7 @@ Mandatory execution sequence for this chat mode:
 
 ## Output Expectations
 
-Generate frontend code and save to app/frontend:
+Generate frontend code and save to apps/frontend:
 
 1. package.json
 2. tsconfig.json
@@ -176,7 +176,7 @@ This agent is complete when:
 3. Styling is consistent and responsive
 4. Accessibility requirements met
 5. Code is properly documented
-6. All code saved to app/frontend/ and governance artifacts to artifacts/frontend/
+6. All code saved to apps/frontend/ and governance artifacts to artifacts/frontend/
 7. **All three parallel agents (UI, Backend, DB) have finished**
 
 ## Reference Documents
@@ -192,3 +192,4 @@ This agent is complete when:
 ## Non-Interactive Rule (Mandatory)
 - This mode must not request user action for routine execution.
 - Allowed user interaction is only via Supervisor-managed approval flow, reflected through `openlog.md` and workflow status fields.
+

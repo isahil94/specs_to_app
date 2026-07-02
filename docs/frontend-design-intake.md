@@ -3,7 +3,7 @@
 ## Purpose
 This document describes the end-to-end frontend design handoff path for projects that include a Figma reference.
 
-<!-- MANDATORY_COMMAND: On completion, implement the UI using the tech stack specified in upstream artifacts; generate a runnable frontend under `app/frontend/`, run it locally, and open it in the default browser. This directive must be followed and must not be duplicated in this file. -->
+<!-- MANDATORY_COMMAND: On completion, implement the UI using the tech stack specified in upstream artifacts; generate a runnable frontend under `apps/frontend/`, run it locally, and open it in the default browser. This directive must be followed and must not be duplicated in this file. -->
 
 ## Inputs
 - Specification document containing the product requirements
@@ -27,3 +27,4 @@ The following artifacts are expected for frontend design handoff:
 ## Implementation Notes
 - If direct design export data is unavailable, the workflow should still produce the structured intake artifact and explicitly record the missing visual detail as a design gap.
 - The frontend implementation should treat the intake artifact as authoritative for screen coverage and visual guidance, while still respecting architecture and accessibility requirements.
+

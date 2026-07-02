@@ -23,7 +23,7 @@ You are the Reviewer Agent. Your responsibility is to:
 
 ## Input Artifacts
 
-- Review: `app/frontend/`
+- Review: `apps/frontend/`
 - Review: `app/backend/`
 - Review: `apps/database/`
 - Review: `artifacts/database/`
@@ -160,3 +160,4 @@ This agent is complete when:
 ---
 
 **Note:** This is the final quality gate before deployment. Be thorough and fair in assessment.
+

@@ -20,8 +20,8 @@ next: reviewer
 - artifacts/requirements/acceptance_criteria.md
 - artifacts/requirements/non_functional_requirements.md
 - artifacts/requirements/traceability.md
-- app/frontend/
-- app/backend/
+- apps/frontend/
+- apps/backend/
 - artifacts/database/
 - apps/database/
 
@@ -44,6 +44,7 @@ next: reviewer
 - Generate Unit Tests
 - Generate Integration Tests
 - Generate API/UI/E2E test suites
+- Validate Authentication and Page Workflows
 - Generate test data, fixtures, config, and execution scripts
 
 ## Templates
@@ -63,12 +64,15 @@ next: reviewer
 - ai/contracts/quality-report-contract.md
 
 ## Validation Scope
-- Broken references only
-- Missing required inputs only
-- Missing required outputs only
+- Validate required inputs, outputs, and artifact references before execution
+- Run Pylance-based static validation for backend, frontend, and database code to catch unresolved imports, typing issues, and structural defects
+- Exercise authentication and authorization flows end-to-end, including signup validation, login validation, duplicate-user handling, missing credentials, invalid credentials, and successful sign-in/sign-out scenarios
+- Validate critical application pages and workflows, including dashboard, projects, tasks, comments, labels, notifications, and profile/account screens, for required-field checks, empty states, error handling, and successful completion paths
+- Verify database constraints, persistence rules, and error responses for invalid or missing data
 
 ## Output Rules
 - Generate executable tests and test assets, then execute configured validation/test runs
+- If matching tests do not exist for a component, workflow, API, UI flow, or database rule, create new test cases and publish them under the appropriate owned paths in `artifacts/tests/` (`unit/`, `integration/`, `api/`, `ui/`, `e2e/`, `fixtures/`, `data/`, `config/`, and execution scripts)
 - Keep Markdown outputs limited to quality-report.md, handoff-contract.md, and openlog.md
 - Reference upstream artifacts instead of restating them
 - Preserve mandatory schemas for openlog/handoff/quality artifacts; compact content only.
@@ -82,7 +86,7 @@ next: reviewer
 
 ## Local Run Checklist (Mandatory)
 1. Prepare required runtime/tooling for test execution when needed.
-2. Generate/update test artifacts in owned paths.
+2. Inspect existing QA artifacts and test coverage; if absent or incomplete for a required path, generate new tests and supporting assets in owned paths.
 3. Execute unit/integration/api/ui/e2e checks applicable to available artifacts.
 4. Record outcomes in `quality-report.md`, `handoff-contract.md`, and `openlog.md`.
 5. Mark stage COMPLETE only when checks pass or BLOCKED/FAILED per contract.
@@ -92,3 +96,4 @@ Produces executable test implementation and governance artifacts only.
 
 ## Next Agent
 reviewer
+

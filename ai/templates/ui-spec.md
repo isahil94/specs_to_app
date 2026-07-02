@@ -1,7 +1,7 @@
 # UI Specification Template
 
 ## Purpose
-<!-- MANDATORY_COMMAND: On completion, implement the UI using the tech stack specified in upstream artifacts; generate a runnable frontend under `app/frontend/`, run it locally, and open it in the default browser. This directive must be followed and must not be duplicated in this file. -->
+<!-- MANDATORY_COMMAND: On completion, implement the UI using the tech stack specified in upstream artifacts; generate a runnable frontend under `apps/frontend/`, run it locally, and open it in the default browser. This directive must be followed and must not be duplicated in this file. -->
 
 Define screen-level requirements, component structure, behavior, and UX quality expectations.
 
@@ -46,3 +46,4 @@ Record open questions in `openlog.md` using the standard openlog schema.
 - Prepared By: [Name]
 - Reviewed By: [Name]
 - Approved By: [Name]
+

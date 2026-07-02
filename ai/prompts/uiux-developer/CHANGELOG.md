@@ -7,7 +7,7 @@ Status: Active
 
 ### Added
 - Mandatory Frontend Full Auto mode for non-interactive execution.
-- Canonical output-location rule: frontend implementation code in `app/frontend/`, governance artifacts in `artifacts/frontend/`.
+- Canonical output-location rule: frontend implementation code in `apps/frontend/`, governance artifacts in `artifacts/frontend/`.
 
 ### Changed
 - Artifact ownership status markers normalized to ASCII.

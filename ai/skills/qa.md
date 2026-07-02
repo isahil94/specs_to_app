@@ -37,13 +37,14 @@ Create unit tests that verify individual components function correctly in isolat
 ### Execution Steps
 1. Analyze code/components to test
 2. Identify testable units (functions, methods, classes)
-3. Write tests for happy path
-4. Write tests for error cases
-5. Write tests for boundary conditions
-6. Write tests for edge cases
-7. Set up test data and mocks
-8. Run tests and verify passing
-9. Measure and report code coverage
+3. If no matching test exists for the unit, create a new test case and place it in the appropriate QA artifact path under `artifacts/tests/`
+4. Write tests for happy path
+5. Write tests for error cases
+6. Write tests for boundary conditions
+7. Write tests for edge cases
+8. Set up test data and mocks
+9. Run tests and verify passing
+10. Measure and report code coverage
 
 ### Validation Checklist
 - [ ] Tests are independent and isolated
@@ -103,13 +104,14 @@ Create tests that verify multiple components work together correctly, validating
 ### Execution Steps
 1. Identify component interactions to test
 2. Map user workflows to test scenarios
-3. Create test data for scenarios
-4. Set up mocks for external dependencies
-5. Write end-to-end tests for workflows
-6. Test API integrations
-7. Test database interactions
-8. Validate data flow across components
-9. Report integration test results
+3. If no integration or workflow test exists, generate a new one and store it in the relevant QA artifact folder under `artifacts/tests/`
+4. Create test data for scenarios
+5. Set up mocks for external dependencies
+6. Write end-to-end tests for workflows
+7. Test API integrations
+8. Test database interactions
+9. Validate data flow across components
+10. Report integration test results
 
 ### Validation Checklist
 - [ ] All key workflows tested
@@ -132,6 +134,69 @@ Create tests that verify multiple components work together correctly, validating
 - Data lost or corrupted in flow
 - Performance unacceptable
 - Components incompatible
+
+---
+
+## Skill: Validate Authentication and Page Workflows
+
+### Purpose
+Validate critical user journeys across backend, frontend, and database layers, ensuring authentication, input constraints, and page-level behavior meet the documented requirements.
+
+### When to Use
+- Verifying signup and login flows
+- Validating form rules and error handling
+- Testing dashboard, project, task, comment, label, notification, and account pages
+- Checking persistence and constraint behavior in the database
+
+### Inputs
+- `application_routes` (array): Backend endpoints and frontend routes to verify
+- `business_rules` (array): Required validation rules and constraints
+- `auth_scenarios` (array): Signup/login cases to exercise
+- `page_flows` (array): Core user journeys and page states
+- `pylance_context` (object, optional): Static analysis context from Pylance
+
+### Outputs
+- `workflow_validation_results` (object): Results for auth and page-flow checks
+- `constraint_findings` (array): Missing or invalid validation findings
+- `defect_report` (array): Issues discovered during workflow validation
+- `recommendations` (array): Follow-up actions for failed scenarios
+
+### Dependencies
+- Application implementation available
+- Requirements and acceptance criteria documented
+- Pylance or equivalent static analysis available
+
+### Execution Steps
+1. Run Pylance-based static validation for backend, frontend, and database code.
+2. Review authentication requirements for signup and login.
+3. If the required workflow or validation test is missing, generate a new test case and publish it under the appropriate QA artifact path in `artifacts/tests/`.
+4. Exercise signup scenarios with missing email, invalid email, weak password, duplicate user, and valid data.
+5. Exercise login scenarios with unknown users, missing credentials, wrong password, and correct credentials.
+6. Validate core pages and flows for required-field checks, empty states, and successful completion paths.
+7. Confirm database constraints and persistence behavior for invalid or missing data.
+8. Record failures, expected behavior, and remediation guidance.
+
+### Validation Checklist
+- [ ] Missing input produces the expected validation error
+- [ ] Invalid input fails safely and clearly
+- [ ] Correct input proceeds to the expected success state
+- [ ] Unknown user and wrong credentials are rejected appropriately
+- [ ] Core pages expose the correct UX for empty/error/success states
+- [ ] Database constraints are enforced or reported clearly
+- [ ] Pylance validation was run and issues were reviewed
+
+### Success Criteria
+- Authentication and page workflows behave according to documented requirements
+- Invalid input is rejected with clear feedback
+- Valid input reaches the expected success state
+- Database and UI behavior remain consistent with the contract
+
+### Failure Conditions
+- Missing validation for required fields
+- Authentication flows allow invalid accounts or leak incorrect state
+- Page workflows fail without clear error handling
+- Database constraints are not enforced or not surfaced
+- Static analysis issues remain unresolved
 
 ---
 

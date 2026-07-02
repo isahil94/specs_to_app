@@ -16,7 +16,7 @@ Supervisor has initiated the parallel implementation stage with three active age
 - Blocking approval items: none
 
 ## Active Parallel Tracks
-1. UI/UX Developer generating frontend implementation code under app/frontend/ and governance artifacts under artifacts/frontend/
+1. UI/UX Developer generating frontend implementation code under apps/frontend/ and governance artifacts under artifacts/frontend/
 2. Backend Developer generating API/business-layer code under app/backend/ and governance artifacts under artifacts/backend/
 3. Database Developer generating database code under apps/database/ and schema/migration artifacts under artifacts/database/
 
@@ -27,6 +27,7 @@ Supervisor has initiated the parallel implementation stage with three active age
 
 ## Next Supervisor Checkpoint
 Validate existence and READY status of:
-- app/frontend/ (code) and artifacts/frontend/handoff-contract.md, artifacts/frontend/openlog.md (governance)
+- apps/frontend/ (code) and artifacts/frontend/handoff-contract.md, artifacts/frontend/openlog.md (governance)
 - app/backend/ (code) and artifacts/backend/handoff-contract.md, artifacts/backend/openlog.md (governance)
 - apps/database/ (code) and artifacts/database/ (all artifacts)
+

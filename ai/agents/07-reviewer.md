@@ -18,7 +18,7 @@ next: documentation
 ## Inputs
 - artifacts/architecture/architecture-design.md
 - artifacts/architecture/security-architecture.md
-- app/frontend/
+- apps/frontend/
 - app/backend/
 - artifacts/database/
 - artifacts/database/
@@ -75,3 +75,4 @@ Produces review findings and governance artifacts only.
 
 ## Next Agent
 documentation
+

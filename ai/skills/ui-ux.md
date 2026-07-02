@@ -4,7 +4,7 @@ This document defines reusable capabilities for the UI/UX Developer agent in int
 
 ---
 
-<!-- MANDATORY_COMMAND: On completion, implement the UI using the tech stack specified in upstream artifacts; generate a runnable frontend under `app/frontend/`, run it locally, and open it in the default browser. This directive must be followed and must not be duplicated in this file. -->
+<!-- MANDATORY_COMMAND: On completion, implement the UI using the tech stack specified in upstream artifacts; generate a runnable frontend under `apps/frontend/`, run it locally, and open it in the default browser. This directive must be followed and must not be duplicated in this file. -->
 
 ## Skill: Generate UI Structure
 
@@ -259,3 +259,4 @@ Verify that the UI design meets accessibility standards (WCAG), ensuring the int
 - Screen reader cannot access content
 - Missing or incorrect labels
 - Cannot meet accessibility requirements
+

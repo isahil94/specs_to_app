@@ -8,7 +8,7 @@
 - Figma Reference (if present):
 - Design Intake Artifact: [figma_design_intake.md | Not provided]
 
-<!-- MANDATORY_COMMAND: On completion, implement the UI using the tech stack specified in upstream artifacts; generate a runnable frontend under `app/frontend/`, run it locally, and open it in the default browser. This directive must be followed and must not be duplicated in this file. -->
+<!-- MANDATORY_COMMAND: On completion, implement the UI using the tech stack specified in upstream artifacts; generate a runnable frontend under `apps/frontend/`, run it locally, and open it in the default browser. This directive must be followed and must not be duplicated in this file. -->
 
 ## Artifacts Produced
 | Artifact | Status |
@@ -81,3 +81,4 @@
 - Keep field values concise (1-3 lines where appropriate).
 - AI Usage is metadata-only; do not add narrative explanations.
 - In backend stage, FULL_AUTO is mandatory unless workflow status is BLOCKED/FAILED.
+

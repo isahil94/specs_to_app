@@ -472,7 +472,7 @@ $ python main.py --spec=spec.md --output=artifacts/
 Output:
   ✅ artifacts/README.md
   ✅ artifacts/docker_image.tar
-  ✅ app/frontend/ (React)
+  ✅ apps/frontend/ (React)
   ✅ app/backend/ (API)
   ✅ app/database/ (Schema)
   ✅ tests/ (Unit + Integration)
@@ -536,3 +536,4 @@ $ docker run -p 5000:5000 specs-to-app:latest
 12. **Documentation & demo**
 
 Would you like me to start implementing Phase 1 starting with main.py and the Supervisor?
+

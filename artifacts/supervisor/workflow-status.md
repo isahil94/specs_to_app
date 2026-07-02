@@ -16,7 +16,7 @@
 ## Parallel Stage Routing
 | Agent | Chat Mode | Status | Required Inputs | Code Output | Governance Output |
 |---|---|---|---|---|---|
-| UI/UX Developer | ui-ux-developer | STARTED | requirements + architecture artifacts | app/frontend/ | artifacts/frontend/ |
+| UI/UX Developer | ui-ux-developer | STARTED | requirements + architecture artifacts | apps/frontend/ | artifacts/frontend/ |
 | Backend Developer | backend-developer | STARTED | requirements + architecture artifacts | app/backend/ | artifacts/backend/ |
 | Database Developer | database-developer | STARTED | requirements + architecture artifacts | apps/database/ | artifacts/database/ |
 
@@ -27,3 +27,4 @@
 
 ## Next Stage
 - QA Engineer (after all parallel agents complete)
+
