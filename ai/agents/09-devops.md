@@ -17,8 +17,8 @@ next: none
 
 ## Inputs
 - artifacts/architecture/deployment-architecture.md
-- artifacts/architecture/technology-stack.md
 - artifacts/architecture/security-architecture.md
+- artifacts/architecture/tdd.md
 - artifacts/tests/
 - artifacts/documentation/
 

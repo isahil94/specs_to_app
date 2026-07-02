@@ -41,6 +41,8 @@
     "editor.wordWrap": "on",
     "editor.formatOnSave": true
   },
+  "markdown.preview.breaks": true,
+  "markdown.extension.preview.autoShow": false,
   "[json]": {
     "editor.formatOnSave": true
   },

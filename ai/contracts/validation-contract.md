@@ -71,6 +71,12 @@ Business Analyst boundary checks (when agentId = business_analyst):
   - non_functional_requirements.md
   - ui_observations.md
   - figma_design_intake.md
+  - screen_elements.md
+  - personas.md
+  - business_process_flows.md
+  - business_rules.md
+  - data_requirements.md
+  - glossary.md
   - openlog.md
   - traceability.md
   - quality_report.md

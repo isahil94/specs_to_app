@@ -5,7 +5,7 @@ version: 1.0.0
 category: backend
 execution: autonomous
 depends_on: [solution_architect]
-consumes: [requirements_spec, user_stories, acceptance_criteria, non_functional_requirements, traceability, architecture_design, technology_stack, module_design, api_contracts, security_architecture, handoff_contract, quality_report, openlog, coding_guidelines]
+consumes: [requirements_spec, user_stories, acceptance_criteria, non_functional_requirements, personas, business_process_flows, business_rules, data_requirements, glossary, screen_elements, traceability, architecture_design, tdd, lld, api_specifications, user_flow_specification, data_dictionary, security_architecture, deployment_architecture, handoff_contract, quality_report, openlog, coding_guidelines]
 produces: [backend_project, controllers, services, dtos, domain_models, validation, authn_authz, api_implementation, exception_handling, logging, configuration, unit_test_scaffolding, backend_design, endpoint_implementation, business_logic, validation_rules, integration_implementation, backend_spec, backend_development_report, quality_report, handoff_contract, openlog]
 next: database_developer
 ---
@@ -20,11 +20,21 @@ next: database_developer
 - artifacts/requirements/user_stories.md
 - artifacts/requirements/acceptance_criteria.md
 - artifacts/requirements/non_functional_requirements.md
+- artifacts/requirements/personas.md
+- artifacts/requirements/business_process_flows.md
+- artifacts/requirements/business_rules.md
+- artifacts/requirements/data_requirements.md
+- artifacts/requirements/glossary.md
+- artifacts/requirements/screen_elements.md
 - artifacts/requirements/traceability.md
 - artifacts/architecture/architecture-design.md
-- artifacts/architecture/module-design.md
-- artifacts/architecture/technology-stack.md
-- artifacts/architecture/api-contracts.md
+- artifacts/architecture/tdd.md
+- artifacts/architecture/lld.md
+- artifacts/architecture/api-specifications.md
+- artifacts/architecture/user-flow-specification.md
+- artifacts/architecture/data-dictionary.md
+- artifacts/architecture/security-architecture.md
+- artifacts/architecture/deployment-architecture.md
 - artifacts/architecture/security-architecture.md
 - artifacts/architecture/handoff-contract.md
 - artifacts/architecture/quality-report.md
@@ -73,7 +83,7 @@ Canonical output location:
 - `artifacts/backend/openlog.md`, `artifacts/backend/handoff-contract.md`, `artifacts/backend/quality-report.md`.
 
 ## Skills Used
-- Implement APIs from api-contracts.md
+- Implement APIs from api-specifications.md as the authoritative contract
 - Implement business/domain services and DTOs
 - Implement authn/authz, validation, and exception handling
 - Implement logging, configuration, and unit-test scaffolding
@@ -102,6 +112,7 @@ Canonical output location:
 ## Output Rules
 - Generate working backend implementation artifacts first
 - Keep governance markdown compact and schema-compliant
+- Treat the BA and SA artifact package as the authoritative detailed handoff and do not infer missing backend behavior from vague context
 - Do not redesign APIs; implement approved contracts and architecture
 - Do not repeat architectural sections verbatim
 - Do not add non-owned artifacts
@@ -111,6 +122,8 @@ Canonical output location:
 - Implement only the Business Layer (controllers, services, domain models, DTOs, validation, auth integration, exception handling, logging/audit hooks, configuration, DI, and specified background jobs).
 - Do not implement presentation layer, database schema/migrations, or infrastructure deployment.
 - Implement only approved API contracts; do not invent endpoints or alter request/response/auth requirements.
+- Use personas.md and business_process_flows.md for business workflow, authorization logic, and validation rule context.
+- Use screen_elements.md for request validation, required fields, business validation, and default values when those behaviors are expressed as business rules.
 - If any required input is missing, stop execution immediately, return an error, and mark stage status as BLOCKED in openlog.md, handoff-contract.md, and quality-report.md.
 
 ## Autonomous Execution Policy (Mandatory)

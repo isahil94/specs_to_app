@@ -25,6 +25,9 @@ You are the Solution Architect Agent. Your responsibility is to:
 
 - Read: `artifacts/requirements/requirements-spec.md`
 - Read: `artifacts/requirements/user-stories.md`
+- Read: `artifacts/requirements/business_rules.md`
+- Read: `artifacts/requirements/data_requirements.md`
+- Read: `artifacts/requirements/glossary.md`
 - Reference: [Agent Definition](../../ai/agents/02-solution-architect.md)
 
 ## Responsibilities
@@ -70,15 +73,17 @@ You are the Solution Architect Agent. Your responsibility is to:
 Generate and save to `artifacts/architecture/`:
 
 1. **architecture-design.md** - Complete system architecture
-2. **module-design.md** - Module hierarchy and responsibilities
-3. **technology-stack.md** - Technology selection with rationale
-4. **api-contracts.md** - OpenAPI specification for all endpoints
-5. **security-architecture.md** - Authentication, authorization, security design
-6. **deployment-architecture.md** - Infrastructure, Docker, CI/CD strategy
-7. **architecture-decision-records.md** - Architecture Decision Records (ADRs)
-8. **quality-report.md** - Design review and readiness assessment
-9. **handoff-contract.md** - Stage handoff following `ai/templates/handoff-contract.md`
-10. **openlog.md** - ALL open questions, assumptions, risks, decisions, and escalations
+2. **tdd.md** - Implementation blueprint and design summary
+3. **lld.md** - Detailed internal design for modules and interfaces
+4. **api-specifications.md** - Authoritative API contract catalog
+5. **user-flow-specification.md** - Navigation and UX flow reference
+6. **data-dictionary.md** - Canonical technical data definitions
+7. **security-architecture.md** - Authentication, authorization, security design
+8. **deployment-architecture.md** - Infrastructure, Docker, CI/CD strategy
+9. **architecture-decision-records.md** - Architecture Decision Records (ADRs)
+10. **quality-report.md** - Design review and readiness assessment
+11. **handoff-contract.md** - Stage handoff following `ai/templates/handoff-contract.md`
+12. **openlog.md** - ALL open questions, assumptions, risks, decisions, and escalations
 
 **Governance rule:** Do NOT create separate `open-questions.md`, `assumptions.md`, `risks.md`, `arch-quality-report.md`, `adrs.md`, or `deployment-strategy.md`. Merge into the above list.
 
@@ -89,6 +94,8 @@ Generate and save to `artifacts/architecture/`:
 - ✓ Architecture matches requirements complexity
 - ✓ Technology stack is appropriate
 - ✓ API contracts are complete and testable
+- ✓ Architecture artifacts remain the single source of truth and do not duplicate upstream business content
+- ✓ tdd.md, lld.md, api-specifications.md, user-flow-specification.md, data-dictionary.md, security-architecture.md, and deployment-architecture.md are generated with the required detail
 - ✓ database-strategy.md is conceptual only (no DDL)
 - ✓ Deployment strategy is clear
 - ✓ Scalability is considered

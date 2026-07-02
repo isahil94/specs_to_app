@@ -100,11 +100,25 @@ Lifecycle (applies to all artifacts):
 | non_functional_requirements.md | Non-functional requirement package grouped by required quality domains | Business Analyst | Solution Architect, QA Engineer, Reviewer | Markdown |
 | ui_observations.md | UI observations from optional Figma URL detected in specification.md (or skipped silently when absent) | Business Analyst | UI/UX Developer, Solution Architect, QA Engineer | Markdown |
 | figma_design_intake.md | Structured Figma design intake artifact with URL, screen coverage, visual system notes, interaction notes, and frontend guidance | Business Analyst | UI/UX Developer, Solution Architect, QA Engineer | Markdown |
+| screen_elements.md | Business-only inventory of every screen and interactive element with field-level business details | Business Analyst | UI/UX Developer, Backend Developer, Database Developer, QA Engineer, Reviewer, Documentation | Markdown |
+| personas.md | Business personas with goals, responsibilities, permissions, and primary processes | Business Analyst | UI/UX Developer, Backend Developer, QA Engineer, Reviewer, Documentation | Markdown |
+| business_process_flows.md | Business workflow documentation with objectives, triggers, preconditions, flows, postconditions, screens, and related acceptance criteria | Business Analyst | UI/UX Developer, Backend Developer, Database Developer, QA Engineer, Reviewer, Documentation | Markdown |
+| business_rules.md | Canonical business-rule catalog with IDs, applicability, validation, exceptions, priority, and related stories | Business Analyst | Solution Architect, UI/UX Developer, Backend Developer, Database Developer, QA Engineer, Reviewer | Markdown |
+| data_requirements.md | Business data requirements without database-schema detail | Business Analyst | Solution Architect, UI/UX Developer, Backend Developer, Database Developer, QA Engineer, Reviewer | Markdown |
+| glossary.md | Canonical business terminology with aliases and acronyms | Business Analyst | Solution Architect, UI/UX Developer, Backend Developer, Database Developer, QA Engineer, Reviewer | Markdown |
 | openlog.md | Structured append-only governance log and workflow status | Business Analyst | Supervisor, Solution Architect, QA Engineer | Markdown |
 | traceability.md | Requirement-to-story-to-acceptance traceability matrix | Business Analyst | Solution Architect, QA Engineer, Reviewer | Markdown |
 | quality_report.md | BA completeness, consistency, traceability, validation, and readiness report | Business Analyst | Supervisor, Solution Architect, Reviewer | Markdown |
 | handoff_contract.md | Standardized BA handoff contract to next stage with coverage and readiness fields | Business Analyst | Supervisor, Solution Architect | Markdown |
 | architecture.md | End-to-end solution architecture and decisions | Solution Architect | UI/UX Developer, Backend Developer, Database Developer, QA Engineer, Reviewer | Markdown |
+| tdd.md | Implementation blueprint consolidating frontend, backend, and database design responsibilities | Solution Architect | UI/UX Developer, Backend Developer, Database Developer, QA Engineer, Reviewer | Markdown |
+| lld.md | Detailed internal design covering modules, interfaces, DTOs, repositories, workflows, and extension points | Solution Architect | Backend Developer, Database Developer, QA Engineer, Reviewer | Markdown |
+| module-design.md | Canonical module decomposition with responsibilities, interfaces, dependencies, ownership boundaries, and error/security/configuration expectations | Solution Architect | UI/UX Developer, Backend Developer, Database Developer, QA Engineer, Reviewer | Markdown |
+| api-specifications.md | Single-source API contract catalog with endpoints, auth, error handling, and journey flows | Solution Architect | Backend Developer, QA Engineer, Documentation | Markdown |
+| user-flow-specification.md | Canonical navigation and UX flow reference for screens and state transitions | Solution Architect | UI/UX Developer, Backend Developer, QA Engineer, Reviewer | Markdown |
+| data-dictionary.md | Canonical technical data definitions and ownership | Solution Architect | Backend Developer, Database Developer, QA Engineer, Reviewer | Markdown |
+| security-architecture.md | Security model, controls, threats, and compliance posture | Solution Architect | Backend Developer, QA Engineer, Reviewer, DevOps & Release | Markdown |
+| deployment-architecture.md | Runtime, environment, deployment, networking, monitoring, and recovery architecture | Solution Architect | DevOps & Release, QA Engineer, Reviewer | Markdown |
 | api-contracts.md | Service interface contracts and error models | Solution Architect | Backend Developer, QA Engineer, Documentation | Markdown |
 | database-schema.md | Logical and physical data model definition | Database Developer | Backend Developer, QA Engineer, Documentation | Markdown |
 | frontend-spec.md | UI structure, interaction, accessibility, design constraints | UI/UX Developer | Backend Developer, QA Engineer, Reviewer, Documentation | Markdown |
@@ -119,7 +133,7 @@ Lifecycle (applies to all artifacts):
 ## 7. Artifact-Specific Contracts
 
 Business Analyst consolidation policy:
-- BA artifact contracts are limited to `requirements_spec.md`, `user_stories.md`, `acceptance_criteria.md`, `non_functional_requirements.md`, `ui_observations.md`, `traceability.md`, `quality_report.md`, `handoff_contract.md`, and `openlog.md`.
+- BA artifact contracts are limited to `requirements_spec.md`, `user_stories.md`, `acceptance_criteria.md`, `non_functional_requirements.md`, `ui_observations.md`, `screen_elements.md`, `personas.md`, `business_process_flows.md`, `business_rules.md`, `data_requirements.md`, `glossary.md`, `traceability.md`, `quality_report.md`, `handoff_contract.md`, and `openlog.md`.
 - Figma URL, when present, is consumed from `specification.md` and propagated unchanged in BA handoff.
 - When a Figma URL is present, Business Analyst must also create `figma_design_intake.md` as a structured frontend handoff artifact.
 - The UI/UX Developer may consume `figma_design_intake.md` when it exists upstream, but the absence of this artifact is not a blocker when no Figma reference exists in the specification.
@@ -187,9 +201,17 @@ content:
 - File Format: Markdown
 - Validation Rules: Figma URL is consumed from `specification.md` when present and preserved unchanged.
 
-### 7.7 traceability.md
+### 7.7 screen_elements.md
+- Name: screen_elements.md
+- Purpose: Business-only inventory of every screen and interactive element with field-level business rules and accessibility expectations.
+- Owner Agent: Business Analyst
+- Consuming Agents: UI/UX Developer, Backend Developer, Database Developer, QA Engineer, Reviewer, Documentation.
+- File Format: Markdown
+- Validation Rules: Must remain technology-agnostic and describe screens and interactive elements in business terminology only.
+
+### 7.8 traceability.md
 - Name: traceability.md
-- Purpose: End-to-end matrix across Epic -> Feature -> Functional Requirement -> User Story -> Acceptance Criteria -> Architecture Module -> API Contract -> Database Entity -> UI Screen -> Test Case.
+- Purpose: End-to-end matrix across Epic -> Feature -> Functional Requirement -> Business Rule -> User Story -> Acceptance Criteria -> Screen -> Screen Element -> Architecture Module -> API Contract -> Database Entity -> UI Screen -> Test Case.
 - Owner Agent: Business Analyst
 - Consuming Agents: Solution Architect, QA Engineer, Reviewer.
 - File Format: Markdown

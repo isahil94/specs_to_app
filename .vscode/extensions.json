@@ -12,6 +12,7 @@
     "ms-vscode-remote.remote-containers",
     "charliermarsh.ruff",
     "ms-python.black-formatter",
-    "ms-python.isort"
+    "ms-python.isort",
+    "shd101wyy.markdown-preview-enhanced"
   ]
 }

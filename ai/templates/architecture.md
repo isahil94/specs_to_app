@@ -3,6 +3,13 @@
 ## Purpose
 Describe system structure, component boundaries, interfaces, and architectural decisions.
 
+## Downstream Readiness Expectations
+- Produce architecture artifacts that are detailed enough for frontend, backend, and database implementation without follow-up clarification.
+- Define component boundaries, interfaces, contracts, state transitions, error handling, security controls, and deployment concerns explicitly.
+- Include Mermaid sequence diagrams in architecture-design.md for authentication, workflow, and cross-service interactions.
+- Include interaction or deployment diagrams where cross-service or cross-layer behavior is important.
+- Ensure the generated artifacts are directly consumable by downstream implementation stages.
+
 ## Metadata
 - Version: [Version]
 - Author: [Author]

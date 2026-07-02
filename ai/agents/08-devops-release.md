@@ -17,8 +17,9 @@ next: documentation
 
 ## Inputs
 - artifacts/architecture/deployment-architecture.md
-- artifacts/architecture/technology-stack.md
 - artifacts/architecture/security-architecture.md
+- artifacts/architecture/tdd.md
+- artifacts/architecture/lld.md
 - artifacts/tests/
 - artifacts/review/review-report.md
 - artifacts/review/findings.md

@@ -18,7 +18,9 @@ next: none
 ## Inputs
 - artifacts/requirements/requirements_spec.md
 - artifacts/architecture/architecture-design.md
-- artifacts/architecture/api-contracts.md
+- artifacts/architecture/api-specifications.md
+- artifacts/architecture/deployment-architecture.md
+- artifacts/architecture/security-architecture.md
 - artifacts/devops/deployment-plan.md
 - artifacts/devops/release-report.md
 

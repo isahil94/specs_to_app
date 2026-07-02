@@ -7,7 +7,7 @@ category: requirements
 execution: autonomous
 depends_on: [supervisor]
 consumes: [specification, figma_url]
-produces: [requirements_spec, user_stories, acceptance_criteria, non_functional_requirements, ui_observations, traceability, quality_report, handoff_contract, openlog]
+produces: [requirements_spec, user_stories, acceptance_criteria, non_functional_requirements, ui_observations, screen_elements, personas, business_process_flows, business_rules, data_requirements, glossary, traceability, quality_report, handoff_contract, openlog]
 next: solution_architect
 ---
 
@@ -23,16 +23,22 @@ next: solution_architect
 - config.yaml (optional)
 
 ## Outputs
-- requirements_spec.md
-- user_stories.md
-- acceptance_criteria.md
-- non_functional_requirements.md
-- ui_observations.md
-- figma_design_intake.md
-- traceability.md
-- quality_report.md
-- handoff_contract.md
-- openlog.md
+- artifacts/requirements/requirements_spec.md
+- artifacts/requirements/user_stories.md
+- artifacts/requirements/acceptance_criteria.md
+- artifacts/requirements/non_functional_requirements.md
+- artifacts/requirements/ui_observations.md
+- artifacts/requirements/figma_design_intake.md
+- artifacts/requirements/screen_elements.md
+- artifacts/requirements/personas.md
+- artifacts/requirements/business_process_flows.md
+- artifacts/requirements/business_rules.md
+- artifacts/requirements/data_requirements.md
+- artifacts/requirements/glossary.md
+- artifacts/requirements/traceability.md
+- artifacts/requirements/quality_report.md
+- artifacts/requirements/handoff_contract.md
+- artifacts/requirements/openlog.md
 
 ## Skills Used
 - Analyze Requirements
@@ -46,6 +52,12 @@ next: solution_architect
 - ai/templates/acceptance-criteria.md
 - ai/templates/non-functional-requirements.md
 - ai/templates/ui-observations.md
+- ai/templates/screen-elements.md
+- ai/templates/personas.md
+- ai/templates/business_process_flows.md
+- ai/templates/business-rules.md
+- ai/templates/data-requirements.md
+- ai/templates/glossary.md
 - ai/templates/traceability.md
 - ai/templates/quality-report.md
 - ai/templates/handoff-contract.md
@@ -90,7 +102,12 @@ next: solution_architect
 - `non_functional_requirements.md`: Use concise measurable requirements for performance, scalability, reliability, availability, security, accessibility, maintainability, logging, audit, observability, backup/recovery, and compliance.
 - `ui_observations.md`: Describe business UI expectations only, including screens, navigation, required user actions, business components, validation expectations, permission visibility, empty states, success states, error states, responsive expectations, and accessibility expectations.
 - `ui_observations.md`: Describe what users must experience, not how to implement it.
-- `traceability.md`: Ensure complete mapping Epic -> Feature -> Functional Requirement -> Business Rule -> User Story -> Acceptance Criteria -> Screen -> API -> Database Entity -> Test Case, and highlight missing mappings.
+- `screen_elements.md`: Describe every screen and every interactive element using business terminology only, including purpose, component or section, labels, placeholders, required fields, validation rules, defaults, visibility, enabled/disabled rules, business rules, and accessibility notes.
+- `business_process_flows.md`: Include Mermaid flow diagrams for each major workflow and lifecycle path so downstream agents can consume the flow visually.
+- `business_rules.md`: Keep a canonical business-rule catalog with rule IDs, applicability, validation, exception handling, priority, and related stories.
+- `data_requirements.md`: Keep business data requirements technology-agnostic and avoid any database-schema detail.
+- `glossary.md`: Keep canonical business terminology with aliases and acronyms.
+- `traceability.md`: Ensure complete mapping Epic -> Feature -> Functional Requirement -> Business Rule -> User Story -> Acceptance Criteria -> Screen -> Screen Element -> API -> Database Entity -> Test Case, and highlight missing mappings.
 - `quality_report.md`: Continue validating requirement completeness, Epic coverage, Feature coverage, Functional Requirement coverage, Story coverage, Acceptance Criteria coverage, NFR coverage, traceability completeness, OpenLog summary, and readiness for Solution Architecture.
 - `handoff_contract.md`: Continue documenting produced artifacts, Workflow ID, Correlation ID, artifact versions, Figma reference (if present), OpenLog summary, blocking issues, ready-for-next-stage status, and next agent.
 - `openlog.md`: Keep standardized append-only format and existing lifecycle behavior.

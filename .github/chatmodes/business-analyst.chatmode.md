@@ -59,7 +59,8 @@ If a Figma URL appears anywhere in `specification.md`, treat it as an additional
 - List dependencies
 
 ### 5. Traceability & Readiness
-- Build end-to-end traceability: Epic -> Feature -> Functional Requirement -> User Story -> Acceptance Criteria -> Architecture Module -> API Contract -> Database Entity -> UI Screen -> Test Case
+- Build end-to-end traceability: Epic -> Feature -> Functional Requirement -> Business Rule -> User Story -> Acceptance Criteria -> Screen -> Screen Element -> Architecture Module -> API Contract -> Database Entity -> Test Case
+- Capture personas.md and business_process_flows.md as source artifacts for downstream journey, workflow, and role-aware behavior without introducing implementation detail.
 - Highlight missing links explicitly
 - Validate readiness for Solution Architect
 
@@ -85,10 +86,16 @@ Generate and save to `artifacts/requirements/`:
 4. **non_functional_requirements.md** - NFRs grouped by Performance, Security, Scalability, Availability, Reliability, Accessibility, Maintainability, Compliance, Logging, Audit, Observability
 5. **ui_observations.md** - Detected Screens, Navigation Flow, UI Components, Accessibility Observations, Missing Elements, Design Consistency, Recommendations
 6. **figma_design_intake.md** - Structured Figma intake artifact with URL, screen coverage, visual system notes, interaction notes, and frontend handoff guidance
-7. **traceability.md** - Requirement traceability matrix
-8. **quality_report.md** - Validate Epic/Feature/FR/story/AC coverage, traceability completeness, open questions, confidence score, and readiness
-9. **handoff_contract.md** - Include artifacts produced, epic/feature/story coverage, open questions summary, blocking issues, workflow status, ready for next stage, next agent, and preserved Figma URL reference if present
-10. **openlog.md** - ALL open questions, assumptions, risks, decisions, and escalations
+7. **screen_elements.md** - Business-only screen and element inventory for every screen and interactive element
+8. **personas.md** - Business personas with goals, responsibilities, permissions, and primary processes
+9. **business_process_flows.md** - Business workflow documentation with flows, triggers, and related acceptance criteria
+10. **traceability.md** - Requirement traceability matrix
+11. **quality_report.md** - Validate Epic/Feature/FR/story/AC coverage, traceability completeness, open questions, confidence score, and readiness
+10. **handoff_contract.md** - Include artifacts produced, epic/feature/story coverage, open questions summary, blocking issues, workflow status, ready for next stage, next agent, and preserved Figma URL reference if present
+11. **business_rules.md** - Canonical business-rule catalog with IDs, applicability, validation, exceptions, priority, and related stories
+12. **data_requirements.md** - Business data requirements without database-schema detail
+13. **glossary.md** - Canonical business terminology with aliases and acronyms
+14. **openlog.md** - ALL open questions, assumptions, risks, decisions, and escalations
 
 Do not add, remove, or rename artifacts.
 
@@ -108,6 +115,9 @@ Do not add, remove, or rename artifacts.
 - ✓ Epics and Features are kept inside `requirements_spec.md`
 - ✓ If Figma URL exists in `specification.md`, it is preserved and used for UI analysis
 - ✓ No API endpoints, database schemas, or technology decisions included
+- ✓ screen_elements.md captures business-only screen and element definitions
+- ✓ personas.md and business_process_flows.md capture business personas and workflows only
+- ✓ business_rules.md, data_requirements.md, and glossary.md preserve business ownership and avoid reintroducing implementation detail
 
 ## Previous Agent
 

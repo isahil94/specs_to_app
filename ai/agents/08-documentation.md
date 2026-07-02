@@ -5,7 +5,7 @@ version: 1.0.0
 category: documentation
 execution: autonomous
 depends_on: [reviewer]
-consumes: [all_artifacts, api_contracts, deployment_guide, architecture_spec]
+consumes: [all_artifacts, screen_elements, api_contracts, deployment_guide, architecture_spec]
 produces: [project_readme, install_guide, user_guide, api_documentation, deployment_guide, changelog, quality_report, handoff_contract, openlog]
 next: devops
 ---
@@ -17,8 +17,11 @@ next: devops
 
 ## Inputs
 - artifacts/requirements/requirements_spec.md
+- artifacts/requirements/screen_elements.md
 - artifacts/architecture/architecture-design.md
-- artifacts/architecture/api-contracts.md
+- artifacts/architecture/api-specifications.md
+- artifacts/architecture/deployment-architecture.md
+- artifacts/architecture/security-architecture.md
 - artifacts/review/review-report.md
 - artifacts/review/findings.md
 

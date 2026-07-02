@@ -73,6 +73,10 @@ Columns: BA = Business Analyst | SA = Solution Architect | UX = UI/UX Developer 
 | acceptance_criteria.md | OWN | CONSUME | REFERENCE | NONE | NONE | CONSUME | REFERENCE | NONE | REFERENCE | REFERENCE |
 | non_functional_requirements.md | OWN | CONSUME | REFERENCE | REFERENCE | REFERENCE | CONSUME | REFERENCE | REFERENCE | REFERENCE | REFERENCE |
 | ui_observations.md | OWN | CONSUME | CONSUME | NONE | NONE | REFERENCE | NONE | NONE | REFERENCE | NONE |
+| screen_elements.md | OWN | CONSUME | CONSUME | CONSUME | CONSUME | CONSUME | CONSUME | NONE | CONSUME | REFERENCE |
+| business_rules.md | OWN | CONSUME | CONSUME | CONSUME | CONSUME | CONSUME | CONSUME | NONE | CONSUME | REFERENCE |
+| data_requirements.md | OWN | CONSUME | CONSUME | CONSUME | CONSUME | CONSUME | CONSUME | NONE | CONSUME | REFERENCE |
+| glossary.md | OWN | CONSUME | CONSUME | CONSUME | CONSUME | CONSUME | CONSUME | NONE | CONSUME | REFERENCE |
 | traceability.md | OWN | CONSUME | NONE | NONE | NONE | CONSUME | CONSUME | NONE | CONSUME | REFERENCE |
 
 ### 3.2 Solution Architect Artifacts
@@ -80,9 +84,12 @@ Columns: BA = Business Analyst | SA = Solution Architect | UX = UI/UX Developer 
 | Artifact | BA | SA | UX | BE | DB | QA | RV | DO | DC | SV |
 |----------|----|----|----|----|----|----|----|----|----|----|
 | architecture-design.md | NONE | OWN | CONSUME | CONSUME | REFERENCE | REFERENCE | CONSUME | REFERENCE | CONSUME | REFERENCE |
-| module-design.md | NONE | OWN | REFERENCE | CONSUME | CONSUME | REFERENCE | REFERENCE | NONE | REFERENCE | NONE |
-| technology-stack.md | NONE | OWN | REFERENCE | CONSUME | CONSUME | REFERENCE | REFERENCE | CONSUME | CONSUME | REFERENCE |
-| api-contracts.md | NONE | OWN | REFERENCE | EXTEND | REFERENCE | CONSUME | REFERENCE | REFERENCE | CONSUME | REFERENCE |
+| module-design.md | NONE | OWN | CONSUME | CONSUME | CONSUME | CONSUME | CONSUME | REFERENCE | CONSUME | REFERENCE |
+| tdd.md | NONE | OWN | CONSUME | CONSUME | CONSUME | CONSUME | CONSUME | REFERENCE | CONSUME | REFERENCE |
+| lld.md | NONE | OWN | REFERENCE | CONSUME | CONSUME | REFERENCE | REFERENCE | NONE | REFERENCE | NONE |
+| api-specifications.md | NONE | OWN | REFERENCE | EXTEND | REFERENCE | CONSUME | REFERENCE | REFERENCE | CONSUME | REFERENCE |
+| user-flow-specification.md | NONE | OWN | CONSUME | CONSUME | REFERENCE | CONSUME | CONSUME | NONE | CONSUME | REFERENCE |
+| data-dictionary.md | NONE | OWN | REFERENCE | CONSUME | CONSUME | CONSUME | CONSUME | REFERENCE | CONSUME | REFERENCE |
 | security-architecture.md | NONE | OWN | NONE | CONSUME | NONE | CONSUME | CONSUME | CONSUME | REFERENCE | REFERENCE |
 | deployment-architecture.md | NONE | OWN | NONE | NONE | NONE | NONE | REFERENCE | CONSUME | CONSUME | REFERENCE |
 | architecture-decision-records.md | NONE | OWN | REFERENCE | REFERENCE | REFERENCE | REFERENCE | CONSUME | REFERENCE | CONSUME | REFERENCE |
@@ -199,6 +206,12 @@ Each agent owns its own scoped instance. No other agent may write to another age
 - `non_functional_requirements.md`
 - `ui_observations.md`
 - `figma_design_intake.md`
+- `screen_elements.md`
+- `personas.md`
+- `business_process_flows.md`
+- `business_rules.md`
+- `data_requirements.md`
+- `glossary.md`
 - `traceability.md`
 - `quality_report.md`
 - `handoff_contract.md` (BA-scoped)
@@ -235,9 +248,11 @@ Figma propagation rule:
 
 **Owns:**
 - `architecture-design.md`
-- `module-design.md`
-- `technology-stack.md`
-- `api-contracts.md`
+- `tdd.md`
+- `lld.md`
+- `api-specifications.md`
+- `user-flow-specification.md`
+- `data-dictionary.md`
 - `security-architecture.md`
 - `deployment-architecture.md`
 - `architecture-decision-records.md`

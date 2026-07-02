@@ -96,6 +96,49 @@ External systems and dependencies:
 - User → Reporting Service: fetch dashboard and reports.
 - Task Service → Audit Store: record each state change.
 
+## Sequence Diagrams
+
+### Authentication Sequence
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant UI as Frontend
+    participant API as Backend API
+    participant A as Auth Service
+    participant DB as User Store
+
+    U->>UI: Enter credentials
+    UI->>API: POST /auth/login
+    API->>A: Validate credentials
+    A->>DB: Load user and hash comparison
+    DB-->>A: User record
+    A-->>API: Auth result and session token
+    API-->>UI: Return token and user context
+    UI-->>U: Show authenticated experience
+```
+
+### Task Update Sequence
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant UI as Frontend
+    participant API as Backend API
+    participant S as Task Service
+    participant DB as Data Store
+    participant N as Notification Service
+
+    U->>UI: Submit task update
+    UI->>API: PUT /tasks/ID
+    API->>S: Validate request and auth
+    S->>DB: Load task and apply update
+    DB-->>S: Updated task record
+    S->>N: Create history and notifications
+    N-->>S: Delivery acknowledgement
+    S-->>API: Confirm success
+    API-->>UI: Return updated task
+    UI-->>U: Show updated state
+```
+
 ## Data and State Considerations
 - Task state evolves through statuses: Todo, In Progress, Review, Completed, Blocked, Archived.
 - Archived tasks are read-only for regular users and remain visible in search results.

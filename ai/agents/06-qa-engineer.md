@@ -5,7 +5,7 @@ version: 1.0.0
 category: testing
 execution: autonomous
 depends_on: [ui_ux_developer, database_developer]
-consumes: [user_stories, api_contracts, acceptance_criteria, frontend_code, backend_code, database_schema]
+consumes: [user_stories, acceptance_criteria, personas, business_process_flows, business_rules, data_requirements, glossary, screen_elements, traceability, api_specifications, user_flow_specification, data_dictionary, security_architecture, deployment_architecture, frontend_code, backend_code, database_schema]
 produces: [unit_tests, integration_tests, api_tests, ui_tests, e2e_tests, test_data, test_fixtures, test_configuration, test_execution_scripts, quality_report, handoff_contract, openlog]
 next: reviewer
 ---
@@ -19,6 +19,12 @@ next: reviewer
 - artifacts/requirements/user_stories.md
 - artifacts/requirements/acceptance_criteria.md
 - artifacts/requirements/non_functional_requirements.md
+- artifacts/requirements/personas.md
+- artifacts/requirements/business_process_flows.md
+- artifacts/requirements/business_rules.md
+- artifacts/requirements/data_requirements.md
+- artifacts/requirements/glossary.md
+- artifacts/requirements/screen_elements.md
 - artifacts/requirements/traceability.md
 - apps/frontend/
 - apps/backend/
@@ -106,6 +112,8 @@ next: reviewer
   - **Navigation Design:** Page transitions, menu navigation, access control per page
   - **Validation Constraints:** Field validations, error messages, boundary conditions, data types
   - **Database Constraints:** Uniqueness rules, required fields, foreign keys, data integrity
+  - **Personas & Workflows:** Role-based behaviors, business workflows, and approval/authorization scenarios
+- **Screen Elements:** Business field rules, visibility, enablement, default values, and validation expectations
   - **Features & Epics:** All user stories with acceptance criteria
 - Start all required services (database, backend, frontend) before running tests
 - **Execute Dynamic Frontend Live Testing (for each feature in artifacts):**
@@ -142,7 +150,7 @@ next: reviewer
    - artifacts/design/sequence-diagrams/ (extract auth flows, user workflows, state transitions)
    - artifacts/design/flow-diagrams/ (extract navigation paths, page transitions)
    - artifacts/database/database-schema.md (extract database constraints, field requirements)
-   - artifacts/architecture/api-contracts.md (extract API validation rules, error codes)
+   - artifacts/architecture/api-specifications.md (extract API validation rules, error codes)
 
 2. **Build Test Matrix from artifacts:**
    - Rows: Each user story/epic from user_stories.md

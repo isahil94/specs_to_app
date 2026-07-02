@@ -5,7 +5,7 @@ version: 1.0.0
 category: frontend
 execution: autonomous
 depends_on: [solution_architect]
-consumes: [requirements_spec, user_stories, acceptance_criteria, non_functional_requirements, ui_observations, traceability, architecture_design, technology_stack, module_design, api_contracts, security_architecture, quality_report, handoff_contract, openlog]
+consumes: [requirements_spec, user_stories, acceptance_criteria, non_functional_requirements, ui_observations, personas, business_process_flows, business_rules, data_requirements, glossary, screen_elements, traceability, architecture_design, tdd, lld, api_specifications, user_flow_specification, data_dictionary, security_architecture, deployment_architecture, quality_report, handoff_contract, openlog]
 produces: [frontend_application, pages, layouts, reusable_components, routing, forms, state_management_scaffolding, api_service_interfaces, styles, assets, quality_report, handoff_contract, openlog]
 next: qa_engineer
 ---
@@ -20,16 +20,26 @@ next: qa_engineer
 ## Inputs
 - artifacts/requirements/requirements_spec.md
 - artifacts/architecture/architecture-design.md
-- artifacts/architecture/technology-stack.md
-- artifacts/architecture/module-design.md
+- artifacts/architecture/tdd.md
+- artifacts/architecture/lld.md
+- artifacts/architecture/api-specifications.md
+- artifacts/architecture/user-flow-specification.md
+- artifacts/architecture/data-dictionary.md
 - artifacts/architecture/security-architecture.md
+- artifacts/architecture/deployment-architecture.md
 - artifacts/requirements/acceptance_criteria.md
 - artifacts/requirements/non_functional_requirements.md
 - artifacts/requirements/ui_observations.md
+- artifacts/requirements/personas.md
+- artifacts/requirements/business_process_flows.md
+- artifacts/requirements/business_rules.md
+- artifacts/requirements/data_requirements.md
+- artifacts/requirements/glossary.md
 - artifacts/requirements/figma_design_intake.md (optional; use when provided upstream)
+- artifacts/requirements/screen_elements.md
 - artifacts/requirements/user_stories.md
 - artifacts/requirements/traceability.md
-- artifacts/architecture/api-contracts.md (reference)
+- artifacts/architecture/api-specifications.md (reference)
 - artifacts/architecture/quality-report.md
 - artifacts/architecture/handoff-contract.md
 - artifacts/architecture/openlog.md
@@ -83,10 +93,13 @@ next: qa_engineer
 - Broken references only
 - Missing required inputs only
 - Missing required outputs only
+- Missing or inconsistent upstream artifact consumption
+- Frontend validation failures such as routing, accessibility, or API contract mismatches
 
 ## Output Rules
 - Generate working frontend implementation artifacts first
 - Keep Markdown outputs limited to quality-report.md, handoff-contract.md, and openlog.md
+- Treat the BA and SA artifact package as the authoritative detailed handoff and do not infer missing UI behavior from vague context
 - Do not generate UI specification documents already produced upstream
 - Do not duplicate architecture or requirement text
 - Reference upstream artifacts where possible
@@ -100,6 +113,8 @@ next: qa_engineer
 - Treat approved Figma as authoritative visual specification; deviations are allowed only for approved requirements, accessibility compliance, or technical limits and must be recorded in openlog.md and handoff-contract.md.
 - If upstream UI observations do not include concrete screen-level visual details (layout, spacing, component patterns, states, or responsive expectations), record that as a design-gap blocker rather than claiming pixel-level Figma parity.
 - Implement only the Presentation Layer: routing, layouts, pages, reusable components, forms, UI state management, navigation, UI auth flows, responsive behavior, accessibility, styling, and static assets.
+- Use personas.md and business_process_flows.md for user journeys, navigation, interaction flow, and role-aware UI.
+- Use screen_elements.md as the authoritative business screen and element inventory for forms, inputs, labels, placeholders, validation, visibility, and screen composition.
 - Use only approved API contracts for frontend service abstractions; do not invent endpoints or backend behavior.
 - If any required input other than figma_design_intake.md is missing, stop execution immediately, return an error, and mark stage status as BLOCKED in openlog.md, handoff-contract.md, and quality-report.md.
 

@@ -5,7 +5,7 @@ version: 1.0.0
 category: review
 execution: autonomous
 depends_on: [qa_engineer]
-consumes: [all_artifacts, frontend_code, backend_code, database_schema, tests]
+consumes: [all_artifacts, personas, business_process_flows, screen_elements, frontend_code, backend_code, database_schema, tests]
 produces: [review_report, quality_scorecard, findings, improvement_recommendations, quality_report, handoff_contract, openlog]
 next: documentation
 ---
@@ -17,7 +17,13 @@ next: documentation
 
 ## Inputs
 - artifacts/architecture/architecture-design.md
+- artifacts/architecture/tdd.md
+- artifacts/architecture/lld.md
+- artifacts/architecture/api-specifications.md
+- artifacts/architecture/user-flow-specification.md
+- artifacts/architecture/data-dictionary.md
 - artifacts/architecture/security-architecture.md
+- artifacts/architecture/deployment-architecture.md
 - apps/frontend/
 - app/backend/
 - artifacts/database/
@@ -67,6 +73,8 @@ next: documentation
 - Findings-first structure
 - Perform review only; do not generate implementation artifacts
 - Validate business requirements, architecture, UI, backend, database, tests, traceability, code quality, security, performance, and OpenLog
+- Validate consistency between requirements, user stories, personas, business_process_flows, screen_elements, and traceability
+- Validate consistency between requirements, user stories, screen_elements.md, and traceability
 - No implementation redesign details
 - Preserve mandatory schemas for openlog/handoff/quality artifacts; compact content only.
 

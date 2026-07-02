@@ -22,6 +22,7 @@ next: business_analyst
 - approval_decisions.json
 - stage handoff_contract.md
 - stage openlog.md
+- artifacts/requirements/screen_elements.md (when available from Business Analyst)
 
 ## Outputs
 - workflow-status.md

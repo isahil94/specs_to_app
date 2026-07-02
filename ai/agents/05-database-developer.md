@@ -5,7 +5,7 @@ version: 1.0.0
 category: database
 execution: autonomous
 depends_on: [backend_developer]
-consumes: [requirements_spec, user_stories, acceptance_criteria, traceability, architecture_design, technology_stack, module_design, api_contracts, security_architecture, backend_design, backend_endpoints, backend_business_logic, backend_validation_rules, backend_integration_implementation, backend_spec, backend_handoff, handoff_contract, quality_report, openlog]
+consumes: [requirements_spec, user_stories, acceptance_criteria, business_process_flows, business_rules, data_requirements, glossary, screen_elements, traceability, architecture_design, tdd, lld, api_specifications, user_flow_specification, data_dictionary, security_architecture, deployment_architecture, backend_design, backend_endpoints, backend_business_logic, backend_validation_rules, backend_integration_implementation, backend_spec, backend_handoff, handoff_contract, quality_report, openlog]
 produces: [sql_schema, migrations, seed_data, constraints, indexes, views, procedures_functions, orm_mapping, database_readme, quality_report, handoff_contract, openlog]
 next: qa_engineer
 ---
@@ -19,12 +19,21 @@ next: qa_engineer
 - artifacts/requirements/requirements_spec.md
 - artifacts/requirements/user_stories.md
 - artifacts/requirements/acceptance_criteria.md
+- artifacts/requirements/business_process_flows.md
+- artifacts/requirements/business_rules.md
+- artifacts/requirements/data_requirements.md
+- artifacts/requirements/glossary.md
+- artifacts/requirements/screen_elements.md
 - artifacts/requirements/traceability.md
 - artifacts/architecture/database-strategy.md
 - artifacts/architecture/architecture-design.md
-- artifacts/architecture/module-design.md
-- artifacts/architecture/technology-stack.md
+- artifacts/architecture/tdd.md
+- artifacts/architecture/lld.md
+- artifacts/architecture/api-specifications.md
+- artifacts/architecture/user-flow-specification.md
+- artifacts/architecture/data-dictionary.md
 - artifacts/architecture/security-architecture.md
+- artifacts/architecture/deployment-architecture.md
 - artifacts/backend/backend-design.md
 - artifacts/backend/endpoint-implementation.md
 - artifacts/backend/business-logic.md
@@ -32,7 +41,7 @@ next: qa_engineer
 - artifacts/backend/integration-implementation.md
 - artifacts/backend/backend-spec.md
 - artifacts/backend/backend-development-report.md
-- artifacts/architecture/api-contracts.md (reference)
+- artifacts/architecture/api-specifications.md (reference)
 - artifacts/architecture/handoff-contract.md
 - artifacts/architecture/quality-report.md
 - artifacts/architecture/openlog.md
@@ -87,6 +96,7 @@ next: qa_engineer
 ## Output Rules
 - Generate working database implementation artifacts first
 - Keep Markdown outputs limited to quality-report.md, handoff-contract.md, and openlog.md
+- Treat the BA and SA artifact package as the authoritative detailed handoff and do not infer missing persistence behavior from vague context
 - Implement approved database design; do not redesign data model
 - Avoid repeating architecture and backend content
 - Treat backend implementation artifacts as authoritative context for data-layer realization.
@@ -96,6 +106,8 @@ next: qa_engineer
 - Implement only the Data Layer (schema, tables, relationships, constraints, indexes, views/procedures/triggers when approved, seed data, migrations, audit columns, soft delete support, and optimistic concurrency where required).
 - Do not implement backend services/APIs or presentation layer behavior.
 - Implement exactly approved architecture; do not invent entities, change relationships, or modify business rules.
+- Use business_process_flows.md to validate entity lifecycle, persistence requirements, data ownership, and audit implications.
+- Use screen_elements.md for required attributes, optional attributes, constraints, and defaults where business rules imply persistence behavior.
 - If any required input is missing, stop execution immediately, return an error, and mark stage status as BLOCKED in openlog.md, handoff-contract.md, and quality-report.md.
 
 # Initializer and Migration Requirements

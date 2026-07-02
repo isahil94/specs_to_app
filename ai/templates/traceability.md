@@ -12,9 +12,9 @@ Provide requirement-to-delivery traceability for downstream architecture and imp
 - Traceability ID: [Traceability ID]
 
 ## Traceability Matrix
-| Epic | Feature | Functional Requirement | Business Rule | User Story | Acceptance Criteria | Screen | API | Database Entity | Test Case | Status |
-|---|---|---|---|---|---|---|---|---|---|---|
-| [EPIC-001] | [FEAT-001] | [REQ-001] | [BR-001] | [US-001] | [AC-001] | [UI-001] | [API-001] | [DB-001] | [TC-001] | [Covered | Partial | Missing] |
+| Epic | Feature | Functional Requirement | Business Rule | User Story | Acceptance Criteria | Screen | Screen Element | API | Database Entity | Test Case | Status |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| [EPIC-001] | [FEAT-001] | [REQ-001] | [BR-001] | [US-001] | [AC-001] | [UI-001] | [UIE-001] | [API-001] | [DB-001] | [TC-001] | [Covered | Partial | Missing] |
 
 ## Coverage Summary
 - Epics Covered: [count]
@@ -22,6 +22,7 @@ Provide requirement-to-delivery traceability for downstream architecture and imp
 - Functional Requirements Covered: [count]
 - User Stories Covered: [count]
 - Acceptance Criteria Covered: [count]
+- Screen Elements Covered: [count]
 - Missing Trace Links: [count]
 - Epic-to-Feature Coverage Complete: [Yes/No]
 - Feature-to-Story Coverage Complete: [Yes/No]

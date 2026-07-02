@@ -3,6 +3,13 @@
 ## Purpose
 Define the master business specification in a traceable, implementation-ready format.
 
+## Downstream Readiness Expectations
+- Produce business artifacts that are detailed enough for UI/UX, Backend, and Database agents to implement without inferencing missing behavior.
+- Capture user journeys, validation rules, state transitions, permissions, notifications, audit expectations, and data constraints explicitly.
+- Include Mermaid flow diagrams in business_process_flows.md for non-trivial workflows and lifecycle paths.
+- Include concise supporting diagrams or visual structure in requirements_spec.md or ui_observations.md where they improve downstream clarity.
+- Ensure the generated artifacts are directly consumable by downstream stages without needing extra interpretation.
+
 ## Metadata
 - Version: [Version]
 - Author: [Author]

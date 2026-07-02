@@ -3,6 +3,11 @@
 ## Purpose
 Define API contracts in a clear, versioned, and testable format.
 
+## Downstream Readiness Expectations
+- Produce an API contract package detailed enough for frontend, backend, QA, and documentation agents to implement without follow-up clarification.
+- Define endpoints, auth requirements, request/response payloads, validation rules, status codes, pagination/filtering/sorting, idempotency, and audit expectations explicitly.
+- Make this artifact the single authoritative API source for downstream implementation and testing.
+
 ## Metadata
 - Version: [Version]
 - Author: [Author]
@@ -28,14 +33,14 @@ Define API contracts in a clear, versioned, and testable format.
 ## Endpoints
 - [Method | Path | Purpose]
 
-## Request Model
-- [Field | Type | Required | Description]
+## Request Models
+- [Model Name | Field | Type | Required | Description]
 
 ## Request Structure
 - [Headers | Body Shape | Constraints]
 
-## Response Model
-- [Status | Payload | Description]
+## Response Models
+- [Model Name | Field | Type | Required | Description]
 
 ## Response Structure
 - [Status Code | Body Shape | Business Meaning]
