@@ -24,6 +24,7 @@ next: qa_engineer
 - artifacts/requirements/acceptance_criteria.md
 - artifacts/requirements/non_functional_requirements.md
 - artifacts/requirements/ui_observations.md
+- artifacts/requirements/figma_design_intake.md (optional; use when provided upstream)
 - artifacts/requirements/user_stories.md
 - artifacts/requirements/traceability.md
 - artifacts/architecture/api-contracts.md (reference)
@@ -90,10 +91,13 @@ next: qa_engineer
 - Preserve mandatory schemas for openlog/handoff/quality artifacts; compact content only.
 - Automatically consume all available upstream artifacts before generation; treat them as authoritative.
 - Auto-discover and consume Figma reference from upstream artifacts; do not request it again.
+- Use figma_design_intake.md as the structured visual handoff artifact when present.
+- If figma_design_intake.md is absent and no Figma reference exists upstream, continue with the other approved artifacts and do not block on the missing design-intake file.
 - Treat approved Figma as authoritative visual specification; deviations are allowed only for approved requirements, accessibility compliance, or technical limits and must be recorded in openlog.md and handoff-contract.md.
+- If upstream UI observations do not include concrete screen-level visual details (layout, spacing, component patterns, states, or responsive expectations), record that as a design-gap blocker rather than claiming pixel-level Figma parity.
 - Implement only the Presentation Layer: routing, layouts, pages, reusable components, forms, UI state management, navigation, UI auth flows, responsive behavior, accessibility, styling, and static assets.
 - Use only approved API contracts for frontend service abstractions; do not invent endpoints or backend behavior.
-- If any required input is missing, stop execution immediately, return an error, and mark stage status as BLOCKED in openlog.md, handoff-contract.md, and quality-report.md.
+- If any required input other than figma_design_intake.md is missing, stop execution immediately, return an error, and mark stage status as BLOCKED in openlog.md, handoff-contract.md, and quality-report.md.
 
 ## Autonomous Execution Policy (Mandatory)
 - Mode Name: `Frontend: Full Auto`.

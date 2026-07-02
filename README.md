@@ -44,6 +44,7 @@ flowchart TD
 | Directory | Purpose |
 |---|---|
 | ai | Agents, prompts, skills, governance assets, and platform contracts. |
+| scripts | Setup, build, run, and test lifecycle helper scripts, including frontend design-intake generation. |
 | configs | Workflow, agent, model, and platform configuration controls. |
 | orchestration | Core subsystem architecture and orchestration runtime modules. |
 | artifacts | Generated stage outputs, reports, and lifecycle deliverables. |

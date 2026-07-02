@@ -198,6 +198,7 @@ Each agent owns its own scoped instance. No other agent may write to another age
 - `acceptance_criteria.md`
 - `non_functional_requirements.md`
 - `ui_observations.md`
+- `figma_design_intake.md`
 - `traceability.md`
 - `quality_report.md`
 - `handoff_contract.md` (BA-scoped)
@@ -209,7 +210,7 @@ Each agent owns its own scoped instance. No other agent may write to another age
 - `config.yaml` (optional)
 
 Figma propagation rule:
-- If a Figma URL exists in `specification.md`, Business Analyst must consume it directly and preserve it unchanged through `ui_observations.md` and `handoff_contract.md`.
+- If a Figma URL exists in `specification.md`, Business Analyst must consume it directly and preserve it unchanged through `ui_observations.md`, `figma_design_intake.md`, and `handoff_contract.md`.
 
 **May Extend:** None.
 
@@ -298,6 +299,7 @@ Figma propagation rule:
 **Consumes:**
 - `architecture-design.md`
 - `ui_observations.md`
+- `figma_design_intake.md` (when present upstream)
 - `user_stories.md`
 - `api-contracts.md` (reference only — must not modify)
 

@@ -70,6 +70,7 @@ Business Analyst boundary checks (when agentId = business_analyst):
   - acceptance_criteria.md
   - non_functional_requirements.md
   - ui_observations.md
+  - figma_design_intake.md
   - openlog.md
   - traceability.md
   - quality_report.md
@@ -77,6 +78,8 @@ Business Analyst boundary checks (when agentId = business_analyst):
 - No additional BA artifacts are produced outside the package.
 - No duplicate information is spread across BA artifacts.
 - If a Figma URL exists in `specification.md`, it is consumed automatically and preserved unchanged in BA outputs.
+- If a Figma URL exists in `specification.md`, `figma_design_intake.md` must also be generated with the URL, covered screens, and frontend-relevant visual notes.
+- If no Figma URL exists in `specification.md`, the frontend stage must continue without blocking and may proceed using the other approved requirement artifacts.
 - Acceptance criteria are centralized in `acceptance_criteria.md` and are not duplicated in `user_stories.md`.
 
 Solution Architect boundary checks (when agentId = solution_architect):

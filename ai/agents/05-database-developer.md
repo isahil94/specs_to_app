@@ -121,7 +121,7 @@ next: qa_engineer
 The Database Developer agent MUST perform the following steps during `Database: Full Auto` execution and record outcomes in the stage artifacts. These steps are mandatory and must be performed in sequence unless the workflow is explicitly BLOCKED.
 
 1. Validate (no persistent DB changes): run schema and migration validation in-memory (`--validate`) and record validation results in `artifacts/database/quality-report.md`. This step must not modify or create the persistent DB.
-2. Initialize persistent DB: create or recreate the runtime database (`artifacts/database/app.db`) and seed required sample data (`--init`). Record the initialization outcome in `artifacts/database/handoff-contract.md` and `artifacts/database/openlog.md`.
+2. Initialize persistent DB: create or recreate the runtime database (`apps/database/app.db`) and seed required sample data (`--init`). Record the initialization outcome in `artifacts/database/handoff-contract.md` and `artifacts/database/openlog.md`.
 3. Start and verify DB: for file-based engines (SQLite), open a connection and execute queries to confirm required tables exist and seed data is accessible; for server-based engines, attempt to start/connect to the service and run the same verification queries. Record verification results and table listings in `artifacts/database/quality-report.md` and `artifacts/database/openlog.md`.
 
 If any step fails, append the failure and blocking reason to `openlog.md` and mark the stage as BLOCKED per the Output Rules.

@@ -6,6 +6,7 @@
 - Agent:
 - Stage:
 - Figma Reference (if present):
+- Design Intake Artifact: [figma_design_intake.md | Not provided]
 
 ## Artifacts Produced
 | Artifact | Status |

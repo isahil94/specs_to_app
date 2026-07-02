@@ -28,6 +28,8 @@ https://www.figma.com/make/YnxUzBz6USzrnokLtV4Jd0/Task-Management-System-Screens
 
 The UI implementation shall closely match the supplied design.
 
+A structured design intake artifact will be generated from this specification to support frontend implementation.
+
 ### Available Screens
 
 - Login

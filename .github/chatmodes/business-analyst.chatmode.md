@@ -84,10 +84,11 @@ Generate and save to `artifacts/requirements/`:
 3. **acceptance_criteria.md** - Centralized acceptance criteria organized by User Story
 4. **non_functional_requirements.md** - NFRs grouped by Performance, Security, Scalability, Availability, Reliability, Accessibility, Maintainability, Compliance, Logging, Audit, Observability
 5. **ui_observations.md** - Detected Screens, Navigation Flow, UI Components, Accessibility Observations, Missing Elements, Design Consistency, Recommendations
-6. **traceability.md** - Requirement traceability matrix
-7. **quality_report.md** - Validate Epic/Feature/FR/story/AC coverage, traceability completeness, open questions, confidence score, and readiness
-8. **handoff_contract.md** - Include artifacts produced, epic/feature/story coverage, open questions summary, blocking issues, workflow status, ready for next stage, next agent, and preserved Figma URL reference if present
-9. **openlog.md** - ALL open questions, assumptions, risks, decisions, and escalations
+6. **figma_design_intake.md** - Structured Figma intake artifact with URL, screen coverage, visual system notes, interaction notes, and frontend handoff guidance
+7. **traceability.md** - Requirement traceability matrix
+8. **quality_report.md** - Validate Epic/Feature/FR/story/AC coverage, traceability completeness, open questions, confidence score, and readiness
+9. **handoff_contract.md** - Include artifacts produced, epic/feature/story coverage, open questions summary, blocking issues, workflow status, ready for next stage, next agent, and preserved Figma URL reference if present
+10. **openlog.md** - ALL open questions, assumptions, risks, decisions, and escalations
 
 Do not add, remove, or rename artifacts.
 

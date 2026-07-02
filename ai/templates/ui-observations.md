@@ -13,6 +13,19 @@ Automatically consume Figma URL from `specification.md` if present. If absent, c
 - Workflow ID: [Workflow ID]
 - Figma Reference: [URL]
 
+## Figma Design Intake
+- Design Extraction Status: [Direct asset export available | URL only | Pending]
+- Typography: [Type scale, font families, weights, leading, letter spacing]
+- Spacing: [Spacing scale, layout grid, padding, gaps, margins]
+- Color Tokens: [Primary, secondary, surface, text, border, feedback, semantic colors]
+- Iconography: [Icon set, size rules, usage patterns, states]
+- Component States: [Default, hover, focus, active, disabled, selected, loading, empty, error, success]
+- Screen Coverage: [List of screens covered by the design reference]
+- Interaction Notes: [Primary interactions, hover/focus/selected/error/loading/empty states]
+- Responsive Notes: [Breakpoints, stack behavior, overflow expectations]
+- Accessibility Notes: [Contrast, focus visibility, semantics, reduced motion expectations]
+- Missing Design Details: [Any details not yet available from the design reference]
+
 ## Screen Contracts
 - Screen Name: [Name]
 - Purpose: [Purpose]
@@ -27,6 +40,7 @@ Automatically consume Figma URL from `specification.md` if present. If absent, c
 - Error State: [Expected user-visible behavior]
 - Accessibility Expectations: [Business-level accessibility expectations]
 - Responsive Expectations: [Business-level responsiveness expectations]
+- Visual Detail Notes: [Layout, spacing, hierarchy, component patterns, notable states]
 
 ## OpenLog References
 - Raise only necessary UI questions in `openlog.md`.

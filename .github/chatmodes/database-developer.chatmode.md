@@ -110,7 +110,7 @@ Mandatory execution sequence for this chat mode:
 Additional Mandatory Full Auto Steps:
 1. Run in-memory validation (`--validate`) without creating or modifying the persistent DB and write results to `artifacts/database/quality-report.md`.
 	- This validation MUST include constraints checks (FKs, UNIQUE, NOT NULL, CHECK) and repository guardrail checks (naming, security, linting rules).
-2. Initialize the persistent DB and seed data (`--init`), creating `artifacts/database/app.db` where applicable. Record outcomes to `artifacts/database/handoff-contract.md`.
+2. Initialize the persistent DB and seed data (`--init`), creating `apps/database/app.db` where applicable. Record outcomes to `artifacts/database/handoff-contract.md`.
 3. Start/verify the DB by connecting and querying required tables; record verification outcomes and table listings to `artifacts/database/openlog.md` and `artifacts/database/quality-report.md`.
 
 ### Reference Skills

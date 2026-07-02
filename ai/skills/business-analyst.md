@@ -36,6 +36,7 @@ Extract structured business requirements from raw specifications, identifying go
 - `stakeholder_analysis` (array): Stakeholder responsibilities, goals, pain points, and success criteria
 - `glossary_terms` (array): Business glossary entries
 - `ui_observations` (array): Observations from the provided design reference
+- `figma_design_intake` (object): Structured Figma intake summary including URL, screen coverage, visual notes, and frontend handoff guidance
 - `business_capability_requirements` (array): Capability statements grouped by business domain
 - `business_data_model` (array): Conceptual entities and relationships
 

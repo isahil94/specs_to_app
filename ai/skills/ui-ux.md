@@ -21,6 +21,7 @@ Create the structural blueprint of the user interface, defining pages, sections,
 - `content_model` (object): Data to display
 - `device_targets` (array, optional): Target devices/screen sizes
 - `design_system` (object, optional): UI component library to use
+- `figma_design_intake` (object, optional): Structured Figma handoff with visual notes and screen coverage
 
 ### Outputs
 - `page_structures` (array): Layout of each page/screen

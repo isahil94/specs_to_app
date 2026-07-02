@@ -99,6 +99,7 @@ Lifecycle (applies to all artifacts):
 | acceptance_criteria.md | Single source of truth for acceptance criteria organized by user story | Business Analyst | Solution Architect, QA Engineer, Reviewer, DevOps & Release | Markdown |
 | non_functional_requirements.md | Non-functional requirement package grouped by required quality domains | Business Analyst | Solution Architect, QA Engineer, Reviewer | Markdown |
 | ui_observations.md | UI observations from optional Figma URL detected in specification.md (or skipped silently when absent) | Business Analyst | UI/UX Developer, Solution Architect, QA Engineer | Markdown |
+| figma_design_intake.md | Structured Figma design intake artifact with URL, screen coverage, visual system notes, interaction notes, and frontend guidance | Business Analyst | UI/UX Developer, Solution Architect, QA Engineer | Markdown |
 | openlog.md | Structured append-only governance log and workflow status | Business Analyst | Supervisor, Solution Architect, QA Engineer | Markdown |
 | traceability.md | Requirement-to-story-to-acceptance traceability matrix | Business Analyst | Solution Architect, QA Engineer, Reviewer | Markdown |
 | quality_report.md | BA completeness, consistency, traceability, validation, and readiness report | Business Analyst | Supervisor, Solution Architect, Reviewer | Markdown |
@@ -120,6 +121,8 @@ Lifecycle (applies to all artifacts):
 Business Analyst consolidation policy:
 - BA artifact contracts are limited to `requirements_spec.md`, `user_stories.md`, `acceptance_criteria.md`, `non_functional_requirements.md`, `ui_observations.md`, `traceability.md`, `quality_report.md`, `handoff_contract.md`, and `openlog.md`.
 - Figma URL, when present, is consumed from `specification.md` and propagated unchanged in BA handoff.
+- When a Figma URL is present, Business Analyst must also create `figma_design_intake.md` as a structured frontend handoff artifact.
+- The UI/UX Developer may consume `figma_design_intake.md` when it exists upstream, but the absence of this artifact is not a blocker when no Figma reference exists in the specification.
 - Acceptance criteria remain centralized in `acceptance_criteria.md`; user stories must reference but not duplicate.
 
 ### 7.1 specification.md

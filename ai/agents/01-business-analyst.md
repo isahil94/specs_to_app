@@ -28,6 +28,7 @@ next: solution_architect
 - acceptance_criteria.md
 - non_functional_requirements.md
 - ui_observations.md
+- figma_design_intake.md
 - traceability.md
 - quality_report.md
 - handoff_contract.md
